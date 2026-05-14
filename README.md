@@ -1,2 +1,2 @@
-# glossary
-Glossary of Terminology and Abbrevation
+# Glossary
+Glossary of Terminology and Abbreviation
