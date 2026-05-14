@@ -243,125 +243,237 @@
 | qwen2.5:14b | Qwen | General / mid | A Qwen 2.5 14B model used as a mid-sized general-purpose model. Approximate model size: 9.0 GB. |
 | qwen2.5:7b | Qwen | General / small baseline | A Qwen 2.5 7B model used as a compact multilingual and general-purpose baseline. Approximate model size: 4.7 GB. |
 | qwen3:14b | Qwen | Hybrid-thinking / mid | A Qwen 3 14B model used as a mid-sized hybrid-thinking model in the v3.8 experimental setup. Approximate model size: 9.3 GB. |
----
+
+
 ## 5. Ollama Model Reference List
-| Model | Family | Utilization | Description |
-|---|---|---|---|
-| aya | Cohere | Multilingual | Multilingual model family supporting many languages. |
-| bge-m3 | BAAI | Embedding | Multifunctional, multilingual, and multi-granularity embedding model. |
-| codeqwen | Qwen | Coder | CodeQwen model pretrained on code data. |
-| codellama | Llama | Coder | Code-focused Llama model family for generating and discussing code. |
-| codestral | Mistral | Coder | Mistral AI code model designed for code generation tasks. |
-| cogito | Cogito | Hybrid reasoning | Hybrid reasoning model family by Deep Cogito. |
-| command-r | Cohere | Conversational / long context | Command R model optimized for conversational interaction and long-context tasks. |
-| deepseek-coder | DeepSeek | Coder | DeepSeek coding model trained on code and natural language data. |
-| deepseek-llm | DeepSeek | General / bilingual | DeepSeek language model trained on bilingual data. |
-| deepseek-r1 | DeepSeek | Reasoning / thinking | Open reasoning model family with sizes from small distilled variants to very large models. |
-| deepseek-v2 | DeepSeek | MoE / efficient general | Economical Mixture-of-Experts language model. |
-| deepseek-v3 | DeepSeek | MoE / general | Large Mixture-of-Experts DeepSeek model with activated sparse parameters. |
-| deepseek-v3.2 | DeepSeek | Reasoning / agentic | DeepSeek model combining computational efficiency with reasoning and agent performance. |
-| deepseek-v4-flash | DeepSeek | MoE / reasoning | DeepSeek-V4 preview MoE model for efficient reasoning across long context. |
-| deepseek-v4-pro | DeepSeek | MoE / reasoning | DeepSeek-V4 Pro frontier MoE model with multiple reasoning modes. |
-| deepscaler | DeepSeek-derived | Math / reasoning | Fine-tuned DeepSeek-R1-distilled model for math reasoning. |
-| dolphin-llama3 | Dolphin / Llama | General / coding | Dolphin model based on Llama 3 with instruction, conversational, and coding skills. |
-| dolphin-mistral | Dolphin / Mistral | General / coding | Dolphin model based on Mistral, commonly used for coding and general tasks. |
-| embeddinggemma | Gemma | Embedding | Google embedding model based on Gemma. |
-| falcon | TII | General | Falcon large language model family for summarization, generation, and chat. |
-| functiongemma | Gemma | Function calling | Gemma-based model fine-tuned for function calling. |
-| gemini-3-flash-preview | Gemini | Cloud / vision / thinking | Gemini Flash preview model exposed in the Ollama library as a cloud model. |
-| gemma | Gemma | Lightweight / general | Lightweight open model family from Google DeepMind. |
-| gemma2 | Gemma | General | Google Gemma 2 model family available in 2B, 9B, and 27B sizes. |
-| gemma3 | Gemma | General / vision | Gemma 3 model family designed to run efficiently on a single GPU, with multiple sizes. |
-| gemma3n | Gemma | On-device / efficient | Gemma 3n family designed for efficient execution on everyday devices. |
-| gemma4 | Gemma | Multimodal / reasoning / coding | Gemma 4 family designed for reasoning, agentic workflows, coding, and multimodal understanding. |
-| glm-4.6 | GLM / Z.ai | Agentic / reasoning / coding | GLM model with agentic, reasoning, and coding capabilities. |
-| glm-4.7 | GLM / Z.ai | Coding / reasoning | GLM model focused on advancing coding capability. |
-| glm-4.7-flash | GLM / Z.ai | Reasoning / tools | GLM model balancing performance and efficiency in the 30B class. |
-| glm-5 | GLM / Z.ai | Agentic / reasoning | Large reasoning and agentic model for complex systems engineering. |
-| glm-5.1 | GLM / Z.ai | Agentic engineering / coding | Next-generation GLM model focused on agentic engineering and stronger coding. |
-| glm4 | GLM / Z.ai | General / multilingual | Multilingual general language model. |
-| glm-ocr | GLM / Z.ai | OCR / vision | Multimodal OCR model for complex document understanding. |
-| gpt-oss | OpenAI | Reasoning / agentic / developer | OpenAI open-weight model family designed for reasoning, agentic tasks, and developer use cases. |
-| gpt-oss-safeguard | OpenAI | Safety / reasoning | Safety reasoning model family built on gpt-oss. |
-| granite-code | IBM Granite | Coder | IBM Granite open foundation models for code intelligence. |
-| granite-embedding | IBM Granite | Embedding | IBM Granite dense bi-encoder embedding model family. |
-| granite3.2 | IBM Granite | Long context / thinking | IBM Granite long-context model family fine-tuned for thinking capabilities. |
-| granite3.3 | IBM Granite | Tools / reasoning | IBM Granite model family with long-context and improved reasoning. |
-| granite4 | IBM Granite | Enterprise / tools | IBM Granite 4 model family with improved instruction following and tool calling. |
-| granite4.1 | IBM Granite | Enterprise / RAG / tools | Enterprise-ready Granite model supporting multilingual capability, coding, RAG, tool use, and structured JSON. |
-| hermes3 | Nous Research | General / tools | Hermes 3 model family for general instruction and tool-oriented tasks. |
-| kimi-k2.6 | Kimi / Moonshot | Multimodal / agentic / coding | Multimodal agentic model for long-horizon coding and autonomous execution. |
-| kimi-k2-thinking | Kimi / Moonshot | Thinking / reasoning | Moonshot AI open-source thinking model. |
-| laguna-xs.2 | Laguna | Agentic coding | Mixture-of-Experts model designed for agentic coding and local long-horizon work. |
-| lfm2 | LFM | Hybrid / on-device | Hybrid model family designed for efficient on-device deployment. |
-| lfm2.5-thinking | LFM | Hybrid / on-device | Hybrid thinking model family designed for on-device deployment. |
-| llama2 | Llama | General | Llama 2 foundation language model family. |
-| llama2-chinese | Llama | Chinese chat | Llama 2-based model fine-tuned for Chinese dialogue. |
-| llama3 | Llama | General | Meta Llama 3 family available in 8B and 70B sizes. |
-| llama3.1 | Llama | General / tools | Meta Llama 3.1 model family available in 8B, 70B, and 405B sizes. |
-| llama3.2 | Llama | General / tools / small | Meta Llama 3.2 small model family, including 1B and 3B variants. |
-| llama3.2-vision | Llama | Vision-language | Llama 3.2 vision model family for image reasoning and multimodal generation. |
-| llava | LLaVA | Vision-language | Multimodal model combining a vision encoder with a language model for image and text understanding. |
-| magistral | Mistral | Reasoning | Small efficient Mistral reasoning model family. |
-| medgemma | Gemma | Medical / vision-language | Gemma 3 variants trained for medical text and image comprehension. |
-| medgemma1.5 | Gemma | Medical / vision-language | Updated MedGemma model for medical text and image comprehension. |
-| minicpm-v | MiniCPM | Vision-language | Multimodal LLM family designed for vision-language understanding. |
-| minimax-m2 | MiniMax | Coding / agentic | High-efficiency model for coding and agentic workflows. |
-| minimax-m2.1 | MiniMax | Multilingual / coding | MiniMax model with multilingual and code engineering capability. |
-| minimax-m2.5 | MiniMax | Coding / productivity / reasoning | MiniMax model for real-world productivity and coding tasks. |
-| minimax-m2.7 | MiniMax | Coding / agentic | MiniMax M2-series model for coding, agentic workflows, and productivity. |
-| ministral-3 | Mistral | Edge / tools / vision | Ministral 3 family designed for edge deployment. |
-| mistral | Mistral | General / tools | Mistral 7B model family for compact general-purpose local inference. |
-| mistral-large | Mistral | Large / reasoning / coding | Mistral flagship model family for code, math, reasoning, and multilingual tasks. |
-| mistral-medium-3.5 | Mistral | Reasoning / coding / multimodal | Mistral flagship model combining instruction following, reasoning, and coding. |
-| mistral-nemo | Mistral | General / long context | Mistral-Nemo 12B model with long-context capability. |
-| mistral-small3.2 | Mistral | General / tools / vision | Mistral Small update improving function calling, instruction following, and repetition handling. |
-| moondream | Moondream | Vision-language / edge | Small vision-language model designed for efficient edge use. |
-| mxbai-embed-large | Mixedbread | Embedding | Large embedding model from mixedbread.ai. |
-| nemotron-3-nano | NVIDIA | Agentic / reasoning / efficient | Efficient Nemotron model for open, intelligent, agentic workflows. |
-| nemotron-3-super | NVIDIA | MoE / reasoning / agentic | NVIDIA Nemotron 3 Super MoE model for complex multi-agent applications. |
-| nemotron3 | NVIDIA | Multimodal / enterprise | NVIDIA Nemotron model family for video, audio, image, text, Q&A, summarization, and document intelligence. |
-| neural-chat | Intel / Mistral-based | Chat | Mistral-based fine-tuned model for chat and general domains. |
-| nomic-embed-text | Nomic | Embedding | High-performing text embedding model with a large context window. |
-| nous-hermes | Nous Research | General | General-use models based on Llama and Llama 2. |
-| nous-hermes2 | Nous Research | General / coding | Nous Hermes 2 model family for scientific discussion and coding tasks. |
-| olmo2 | OLMo | General / open research | Open language model family trained for competitive academic performance. |
-| olmo-3 | OLMo | Open research / general | Open language model family designed to support language-model science. |
-| openchat | OpenChat | General chat | Open-source chat model family trained on varied data. |
-| openhermes | OpenHermes | General | OpenHermes model fine-tuned on open datasets. |
-| openthinker | OpenThinker | Reasoning | Open-source reasoning model family distilled from DeepSeek-R1-style data. |
-| phi3 | Phi | Lightweight / reasoning | Microsoft Phi-3 family of lightweight open models. |
-| phi4 | Phi | Reasoning / general | Microsoft Phi-4 14B open model for reasoning and general tasks. |
-| phi4-mini | Phi | Lightweight / reasoning / tools | Small Phi-4 model with multilingual support, reasoning, mathematics, and function calling. |
-| phi4-reasoning | Phi | Reasoning | Microsoft Phi-4 reasoning model family for complex reasoning tasks. |
-| qwen | Qwen | General / multilingual | Alibaba Cloud transformer-based model family spanning several parameter sizes. |
-| qwen2 | Qwen | General / tools | Qwen 2 model family from Alibaba. |
-| qwen2.5 | Qwen | General / tools / multilingual | Qwen 2.5 model family supporting long context and multilingual use cases. |
-| qwen2.5-coder | Qwen | Coder | Code-specific Qwen model family for code generation, code reasoning, and code fixing. |
-| qwen2.5vl | Qwen | Vision-language | Qwen 2.5 vision-language model family. |
-| qwen2-math | Qwen | Math | Qwen2 specialized math model family. |
-| qwen3 | Qwen | General / thinking / MoE | Qwen 3 model family including dense and mixture-of-experts models. |
-| qwen3.5 | Qwen | Multimodal / thinking / tools | Open-source multimodal Qwen family with utility across text, tools, reasoning, and vision. |
-| qwen3.6 | Qwen | Agentic coding / thinking / vision | Qwen3.6 family with upgrades for coding, thinking preservation, and multimodal use. |
-| qwen3-coder | Qwen | Coder / agentic | Long-context Qwen model family for agentic and coding tasks. |
-| qwen3-coder-next | Qwen | Coder / agentic | Qwen coding-focused model optimized for agentic local development workflows. |
-| qwen3-embedding | Qwen | Embedding | Qwen3-based text embedding model family. |
-| qwen3-vl | Qwen | Vision-language / thinking | Vision-language Qwen model family for multimodal reasoning. |
-| r1-1776 | Perplexity / DeepSeek-derived | Reasoning / factuality | Post-trained DeepSeek-R1 variant focused on unbiased and factual information. |
-| rnj-1 | Essential AI | Code / STEM | Dense open-weight model optimized for code and STEM tasks. |
-| smollm | SmolLM | Small / general | Family of small models trained on high-quality datasets. |
-| smollm2 | SmolLM | Small / general | Compact model family with 135M, 360M, and 1.7B variants. |
-| sqlcoder | SQLCoder | SQL / coder | Model fine-tuned for SQL generation tasks. |
-| stable-code | Stability AI | Coder | Compact coding model for code completion and instruction use. |
-| stablelm2 | Stability AI | General / multilingual | Stable LM 2 multilingual language model family. |
-| starcoder | BigCode | Coder | Code generation model trained on many programming languages. |
-| tinyllama | TinyLlama | Small / general | Compact 1.1B Llama-style model trained on large-scale text. |
-| translategemma | Gemma | Translation | Gemma-based translation model collection supporting many languages. |
-| tulu3 | Allen AI | Instruction following | Open-source instruction-following model family. |
-| vicuna | Vicuna | Chat | General chat model based on Llama and Llama 2. |
-| wizardcoder | WizardCoder | Coder | Code generation model family. |
-| wizardlm2 | WizardLM | General / multilingual / reasoning | Microsoft AI model family for complex chat, multilingual reasoning, and agent use cases. |
-| wizard-vicuna-uncensored | Wizard / Vicuna | General chat | Vicuna-based uncensored model family. |
-| yi | Yi | Bilingual / general | Bilingual language model family. |
-| yi-coder | Yi | Coder | Code language model family with fewer than 10B parameters. |
-| zephyr | Hugging Face / Mistral | Assistant / chat | Fine-tuned assistant model family based on Mistral and Mixtral. |
+
+| Model | Parameter Size | Family | Utilization | Ollama Pull Model | Description |
+|---|---:|---|---|---|---|
+| alfred | 40B | Alfred | Chat / instruct | `ollama pull alfred` | Robust conversational model designed for both chat and instruction-following use cases. |
+| all-minilm | 22M, 33M | MiniLM | Embedding | `ollama pull all-minilm` | Embedding models trained on very large sentence-level datasets. |
+| athene-v2 | 72B | Athene | Coding / math / log extraction | `ollama pull athene-v2` | Model focused on code completion, mathematics, and log extraction tasks. |
+| aya | 8B, 35B | Cohere | Multilingual | `ollama pull aya` | Multilingual model family supporting many languages. |
+| aya-expanse | 8B, 32B | Cohere | Multilingual / tools | `ollama pull aya-expanse` | Cohere For AI language models trained to perform well across 23 languages. |
+| bakllava | 7B | LLaVA / Mistral | Vision-language | `ollama pull bakllava` | Multimodal model consisting of a Mistral 7B base model augmented with LLaVA architecture. |
+| bespoke-minicheck | 7B | Bespoke Labs | Fact-checking | `ollama pull bespoke-minicheck` | Fact-checking model developed for verification-oriented tasks. |
+| bge-large | 335M | BAAI | Embedding | `ollama pull bge-large` | BAAI embedding model that maps text into vectors. |
+| bge-m3 | 567M | BAAI | Embedding / multilingual | `ollama pull bge-m3` | Multifunctional, multilingual, and multi-granularity embedding model. |
+| codebooga | 34B | CodeBooga | Coder | `ollama pull codebooga` | Code-instruction model created by merging existing code models. |
+| codegemma | 2B, 7B | Gemma | Coder / general | `ollama pull codegemma` | Lightweight coding model family for code completion, generation, mathematical reasoning, and instruction following. |
+| codegeex4 | 9B | CodeGeeX | Coder | `ollama pull codegeex4` | Model for AI software development scenarios, including code completion. |
+| codellama | 7B, 13B, 34B, 70B | Llama | Coder | `ollama pull codellama` | Code-focused Llama model family for generating and discussing code. |
+| codeqwen | 7B | Qwen | Coder | `ollama pull codeqwen` | CodeQwen model pretrained on code data. |
+| codestral | 22B | Mistral | Coder | `ollama pull codestral` | Mistral AI code model designed for code generation tasks. |
+| codeup | 13B | Llama | Coder | `ollama pull codeup` | Code generation model based on Llama 2. |
+| cogito | 3B, 8B, 14B, 32B, 70B | Cogito | Hybrid reasoning / tools | `ollama pull cogito` | Hybrid reasoning model family by Deep Cogito. |
+| cogito-2.1 | 671B | Cogito | General / cloud | `ollama pull cogito-2.1` | Instruction-tuned generative model family released under MIT license. |
+| command-a | 111B | Cohere | Enterprise / tools | `ollama pull command-a` | Enterprise-oriented model optimized for fast, secure, and high-quality AI tool use. |
+| command-r | 35B | Cohere | Conversational / long context / tools | `ollama pull command-r` | Model optimized for conversational interaction and long-context tasks. |
+| command-r-plus | 104B | Cohere | Enterprise / tools | `ollama pull command-r-plus` | Scalable enterprise model designed for real-world enterprise use cases. |
+| command-r7b | 7B | Cohere | Lightweight / tools | `ollama pull command-r7b` | Small Command R model designed for speed and efficiency on commodity GPUs and edge devices. |
+| command-r7b-arabic | 7B | Cohere | Arabic / enterprise / tools | `ollama pull command-r7b-arabic` | Command R7B variant optimized for Arabic-language enterprise use cases. |
+| dbrx | 132B | Databricks | General | `ollama pull dbrx` | Open general-purpose LLM created by Databricks. |
+| deepcoder | 1.5B, 14B | DeepCoder | Coder / reasoning | `ollama pull deepcoder` | Open-source coder model family with strong code-reasoning capability. |
+| deepscaler | 1.5B | DeepSeek-derived | Math / reasoning | `ollama pull deepscaler` | Fine-tuned DeepSeek-R1-distilled model for math reasoning. |
+| deepseek-coder | 1.3B, 6.7B, 33B | DeepSeek | Coder | `ollama pull deepseek-coder` | Coding model trained on code and natural language data. |
+| deepseek-coder-v2 | 16B, 236B | DeepSeek | Coder / MoE | `ollama pull deepseek-coder-v2` | Mixture-of-Experts code model for code-specific tasks. |
+| deepseek-llm | 7B, 67B | DeepSeek | General / bilingual | `ollama pull deepseek-llm` | Bilingual language model trained on large-scale English and Chinese data. |
+| deepseek-ocr | 3B | DeepSeek | OCR / vision | `ollama pull deepseek-ocr` | Vision-language model for token-efficient OCR. |
+| deepseek-r1 | 1.5B, 7B, 8B, 14B, 32B, 70B, 671B | DeepSeek | Reasoning / thinking | `ollama pull deepseek-r1:14b` | Open reasoning model family with performance approaching leading reasoning models. |
+| deepseek-v2 | 16B, 236B | DeepSeek | MoE / efficient general | `ollama pull deepseek-v2` | Economical and efficient Mixture-of-Experts language model. |
+| deepseek-v2.5 | 236B | DeepSeek | General / coding | `ollama pull deepseek-v2.5` | Upgraded DeepSeek-V2 model integrating general and coding abilities. |
+| deepseek-v3 | 671B | DeepSeek | MoE / general | `ollama pull deepseek-v3` | Large Mixture-of-Experts model with sparse activated parameters. |
+| deepseek-v3.1 | 671B | DeepSeek | Hybrid thinking / tools | `ollama pull deepseek-v3.1` | Hybrid DeepSeek model supporting thinking and non-thinking modes. |
+| deepseek-v3.2 | Not specified | DeepSeek | Reasoning / agentic / tools | `ollama pull deepseek-v3.2` | Model combining computational efficiency with reasoning and agent performance. |
+| deepseek-v4-flash | 284B total, 13B active | DeepSeek | MoE / reasoning / cloud | `ollama pull deepseek-v4-flash` | Preview model for efficient reasoning across long context. |
+| deepseek-v4-pro | Not specified | DeepSeek | MoE / reasoning / cloud | `ollama pull deepseek-v4-pro` | Frontier DeepSeek-V4 model with multiple reasoning modes. |
+| devstral | 24B | Mistral | Coding agent / tools | `ollama pull devstral` | Open-source model for coding agents. |
+| devstral-2 | 123B | Mistral | Coding agent / tools / cloud | `ollama pull devstral-2` | Large coding-agent model for exploring codebases and editing multiple files. |
+| devstral-small-2 | 24B | Mistral | Coding agent / tools / vision | `ollama pull devstral-small-2` | Smaller Devstral model for software engineering agent workflows. |
+| dolphin-llama3 | 8B, 70B | Dolphin / Llama | General / coding | `ollama pull dolphin-llama3` | Dolphin model based on Llama 3 for instruction, conversation, and coding. |
+| dolphin-mistral | 7B | Dolphin / Mistral | General / coding | `ollama pull dolphin-mistral` | Dolphin model based on Mistral, commonly used for coding and general tasks. |
+| dolphin-mixtral | 8x7B, 8x22B | Dolphin / Mixtral | Coding / MoE | `ollama pull dolphin-mixtral` | Dolphin fine-tuned model based on Mixtral MoE models. |
+| dolphin-phi | 2.7B | Dolphin / Phi | General chat | `ollama pull dolphin-phi` | Dolphin model based on Microsoft Phi. |
+| dolphincoder | 7B, 15B | Dolphin / StarCoder2 | Coder | `ollama pull dolphincoder` | Dolphin coding model based on StarCoder2. |
+| duckdb-nsql | 7B | DuckDB / Numbers Station | SQL / text-to-SQL | `ollama pull duckdb-nsql` | Text-to-SQL model made by MotherDuck and Numbers Station. |
+| embeddinggemma | 300M | Gemma | Embedding | `ollama pull embeddinggemma` | Google embedding model based on Gemma. |
+| everythinglm | 13B | Llama | General chat | `ollama pull everythinglm` | Llama 2-based model with support for a 16K context window. |
+| exaone-deep | 2.4B, 7.8B, 32B | EXAONE | Reasoning / math / coding | `ollama pull exaone-deep` | LG AI Research model family for reasoning tasks including math and coding. |
+| exaone3.5 | 2.4B, 7.8B, 32B | EXAONE | Bilingual / instruction | `ollama pull exaone3.5` | Instruction-tuned bilingual English-Korean generative model family. |
+| falcon | 7B, 40B, 180B | TII | General | `ollama pull falcon` | Falcon model family for summarization, text generation, and chatbots. |
+| falcon2 | 11B | TII | General | `ollama pull falcon2` | Causal decoder-only model trained on large-scale tokens. |
+| falcon3 | 1B, 3B, 7B, 10B | TII | Science / math / coding | `ollama pull falcon3` | Efficient model family under 10B parameters for science, math, and coding. |
+| firefunction-v2 | 70B | Fireworks / Llama | Function calling / tools | `ollama pull firefunction-v2` | Function-calling model based on Llama 3. |
+| functiongemma | 270M | Gemma | Function calling / tools | `ollama pull functiongemma` | Gemma-based model fine-tuned for function calling. |
+| gemini-3-flash-preview | Not specified | Gemini | Cloud / vision / thinking / tools | `ollama pull gemini-3-flash-preview` | Gemini Flash preview model exposed through Ollama’s library interface. |
+| gemma | 2B, 7B | Gemma | Lightweight / general | `ollama pull gemma:7b` | Lightweight open model family from Google DeepMind. |
+| gemma2 | 2B, 9B, 27B | Gemma | General | `ollama pull gemma2:9b` | Google Gemma 2 model family for efficient general use. |
+| gemma3 | 270M, 1B, 4B, 12B, 27B | Gemma | General / vision / cloud | `ollama pull gemma3:12b` | Current Gemma model family designed to run efficiently on a single GPU. |
+| gemma3n | E2B, E4B | Gemma | On-device / efficient | `ollama pull gemma3n` | Gemma 3n model family designed for everyday devices. |
+| gemma4 | E2B, E4B, 26B, 31B | Gemma | Multimodal / reasoning / coding / tools | `ollama pull gemma4` | Gemma 4 family for reasoning, agentic workflows, coding, and multimodal understanding. |
+| glm-4.6 | Not specified | GLM / Z.ai | Agentic / reasoning / coding | `ollama pull glm-4.6` | GLM model with agentic, reasoning, and coding capabilities. |
+| glm-4.7 | Not specified | GLM / Z.ai | Coding / reasoning / tools | `ollama pull glm-4.7` | GLM model focused on advancing coding capability. |
+| glm-4.7-flash | Not specified | GLM / Z.ai | Reasoning / lightweight / tools | `ollama pull glm-4.7-flash` | Lightweight GLM model balancing performance and efficiency. |
+| glm-5 | 744B total, 40B active | GLM / Z.ai | Agentic / reasoning / cloud | `ollama pull glm-5` | Large reasoning and agentic model for complex systems engineering. |
+| glm-5.1 | Not specified | GLM / Z.ai | Agentic engineering / coding / cloud | `ollama pull glm-5.1` | Next-generation GLM model focused on stronger coding and agentic engineering. |
+| glm4 | 9B | GLM / Z.ai | General / multilingual | `ollama pull glm4` | Multilingual general language model competitive with Llama 3. |
+| glm-ocr | Not specified | GLM / Z.ai | OCR / vision / tools | `ollama pull glm-ocr` | Multimodal OCR model for complex document understanding. |
+| goliath | Not specified | Llama | General | `ollama pull goliath` | Model created by combining two fine-tuned Llama 2 70B models. |
+| gpt-oss | 20B, 120B | OpenAI | Reasoning / agentic / developer / tools | `ollama pull gpt-oss:20b` | OpenAI open-weight model family for reasoning, agentic tasks, and developer use cases. |
+| gpt-oss-safeguard | 20B, 120B | OpenAI | Safety / reasoning / tools | `ollama pull gpt-oss-safeguard` | Safety reasoning model family built on gpt-oss. |
+| granite-code | 3B, 8B, 20B, 34B | IBM Granite | Coder | `ollama pull granite-code` | IBM Granite open foundation models for code intelligence. |
+| granite-embedding | 30M, 278M | IBM Granite | Embedding | `ollama pull granite-embedding` | IBM Granite dense bi-encoder embedding model family. |
+| granite3-dense | 2B, 8B | IBM Granite | Tools / RAG / coding | `ollama pull granite3-dense` | IBM Granite dense models for tool use, RAG, code generation, translation, and bug fixing. |
+| granite3-moe | 1B, 3B | IBM Granite | MoE / low latency / tools | `ollama pull granite3-moe` | IBM Granite MoE models designed for low-latency usage. |
+| granite3.1-dense | 2B, 8B | IBM Granite | Tools / dense | `ollama pull granite3.1-dense` | IBM Granite dense text-only LLMs trained on large-scale data. |
+| granite3.1-moe | 1B, 3B | IBM Granite | MoE / long context / tools | `ollama pull granite3.1-moe` | Long-context Mixture-of-Experts Granite models designed for low latency. |
+| granite3.2 | 2B, 8B | IBM Granite | Long context / thinking / tools | `ollama pull granite3.2` | IBM Granite long-context model family fine-tuned for thinking capabilities. |
+| granite3.2-vision | 2B | IBM Granite | Vision-language / document understanding / tools | `ollama pull granite3.2-vision` | Compact vision-language model for visual document understanding. |
+| granite3.3 | 2B, 8B | IBM Granite | Tools / reasoning | `ollama pull granite3.3` | IBM Granite models with long context and improved reasoning. |
+| granite3-guardian | 2B, 8B | IBM Granite | Safety / guardrail | `ollama pull granite3-guardian` | Granite Guardian models for detecting risks in prompts and responses. |
+| granite4 | 350M, 1B, 3B | IBM Granite | Enterprise / tools | `ollama pull granite4` | IBM Granite 4 models with improved instruction following and tool calling. |
+| granite4.1 | 3B, 8B, 30B | IBM Granite | Enterprise / RAG / tools | `ollama pull granite4.1` | Enterprise-ready Granite models for multilingual, coding, RAG, tool use, and structured JSON. |
+| hermes3 | 3B, 8B, 70B, 405B | Nous Research | General / tools | `ollama pull hermes3` | Hermes 3 model family for general instruction and tool-oriented tasks. |
+| internlm2 | 1M, 1.8B, 7B, 20B | InternLM | Reasoning / general | `ollama pull internlm2` | InternLM2.5 family for practical scenarios with strong reasoning. |
+| kimi-k2 | Not specified | Kimi / Moonshot | MoE / coding agent / cloud | `ollama pull kimi-k2` | Mixture-of-Experts model with improvements on coding-agent tasks. |
+| kimi-k2.5 | Not specified | Kimi / Moonshot | Multimodal / agentic / thinking | `ollama pull kimi-k2.5` | Multimodal agentic model integrating vision, language, and agentic capability. |
+| kimi-k2.6 | Not specified | Kimi / Moonshot | Multimodal / agentic / coding | `ollama pull kimi-k2.6` | Multimodal agentic model for long-horizon coding and autonomous execution. |
+| kimi-k2-thinking | Not specified | Kimi / Moonshot | Thinking / reasoning / cloud | `ollama pull kimi-k2-thinking` | Moonshot AI open-source thinking model. |
+| laguna-xs.2 | 33B total, 3B active | Laguna | Agentic coding / MoE | `ollama pull laguna-xs.2` | Mixture-of-Experts model for agentic coding and local long-horizon work. |
+| lfm2 | 24B | LFM | Hybrid / on-device / tools | `ollama pull lfm2` | Hybrid model family designed for efficient on-device deployment. |
+| lfm2.5-thinking | 1.2B | LFM | Hybrid thinking / on-device / tools | `ollama pull lfm2.5-thinking` | Hybrid thinking model designed for on-device deployment. |
+| llama-guard3 | 1B, 8B | Llama | Safety classification | `ollama pull llama-guard3` | Llama Guard 3 models for safety classification of LLM inputs and responses. |
+| llama-pro | Not specified | Llama | General / programming / math | `ollama pull llama-pro` | Llama 2 expansion specializing in general language, domain knowledge, programming, and mathematics. |
+| llama2 | 7B, 13B, 70B | Llama | General | `ollama pull llama2:7b` | Llama 2 foundation language model family. |
+| llama2-chinese | 7B, 13B | Llama | Chinese chat | `ollama pull llama2-chinese` | Llama 2-based model fine-tuned for Chinese dialogue. |
+| llama2-uncensored | 7B, 70B | Llama | General chat | `ollama pull llama2-uncensored` | Uncensored Llama 2 model variant. |
+| llama3 | 8B, 70B | Llama | General | `ollama pull llama3:8b` | Meta Llama 3 model family. |
+| llama3-chatqa | 8B, 70B | Llama / NVIDIA | QA / RAG | `ollama pull llama3-chatqa` | NVIDIA model based on Llama 3 for conversational QA and RAG. |
+| llama3-gradient | 8B, 70B | Llama | Long context | `ollama pull llama3-gradient` | Llama 3 variant extending context length to over 1M tokens. |
+| llama3-groq-tool-use | 8B, 70B | Llama / Groq | Tool use / function calling | `ollama pull llama3-groq-tool-use` | Groq model family focused on tool use and function calling. |
+| llama3.1 | 8B, 70B, 405B | Llama | General / tools | `ollama pull llama3.1:8b` | Meta Llama 3.1 model family. |
+| llama3.2 | 1B, 3B | Llama | General / small / tools | `ollama pull llama3.2` | Small Llama 3.2 model family. |
+| llama3.2-vision | 11B, 90B | Llama | Vision-language | `ollama pull llama3.2-vision` | Llama 3.2 vision model family for image reasoning and multimodal generation. |
+| llama3.3 | 70B | Llama | General / tools | `ollama pull llama3.3` | Llama 3.3 70B model with strong general performance. |
+| llama4 | 16x17B, 128x17B | Llama | Multimodal / tools / vision | `ollama pull llama4` | Meta multimodal model family. |
+| llava | 7B, 13B, 34B | LLaVA | Vision-language | `ollama pull llava` | Multimodal model combining a vision encoder with a language model. |
+| llava-llama3 | 8B | LLaVA / Llama | Vision-language | `ollama pull llava-llama3` | LLaVA model fine-tuned from Llama 3 Instruct. |
+| llava-phi3 | 3.8B | LLaVA / Phi | Vision-language | `ollama pull llava-phi3` | Small LLaVA model fine-tuned from Phi-3 Mini. |
+| magistral | 24B | Mistral | Reasoning / thinking / tools | `ollama pull magistral` | Small efficient Mistral reasoning model. |
+| magicoder | 7B | Magicoder | Coder | `ollama pull magicoder` | Code model trained on synthetic instruction data. |
+| marco-o1 | 7B | Alibaba AIDC | Reasoning | `ollama pull marco-o1` | Open reasoning model for real-world solutions. |
+| mathstral | 7B | Mistral | Math / scientific reasoning | `ollama pull mathstral` | Mistral model designed for math reasoning and scientific discovery. |
+| medgemma | 4B, 27B | Gemma | Medical / vision-language | `ollama pull medgemma` | Gemma variants trained for medical text and image comprehension. |
+| medgemma1.5 | 4B | Gemma | Medical / vision-language | `ollama pull medgemma1.5` | Updated MedGemma model for medical text and image comprehension. |
+| meditron | 7B, 70B | Llama | Medical | `ollama pull meditron` | Medical LLM adapted from Llama 2 to the medical domain. |
+| medllama2 | 7B | Llama | Medical QA | `ollama pull medllama2` | Fine-tuned Llama 2 model for answering medical questions. |
+| megadolphin | 120B | Dolphin | General | `ollama pull megadolphin` | Large Dolphin-derived model created by interleaving model weights. |
+| minicpm-v | 8B | MiniCPM | Vision-language | `ollama pull minicpm-v` | Multimodal LLM family for vision-language understanding. |
+| minimax-m2 | Not specified | MiniMax | Coding / agentic / thinking | `ollama pull minimax-m2` | Efficient model for coding and agentic workflows. |
+| minimax-m2.1 | Not specified | MiniMax | Multilingual / coding / tools | `ollama pull minimax-m2.1` | MiniMax model with multilingual and code-engineering capabilities. |
+| minimax-m2.5 | Not specified | MiniMax | Productivity / coding / reasoning | `ollama pull minimax-m2.5` | Model for productivity and coding tasks. |
+| minimax-m2.7 | Not specified | MiniMax | Coding / agentic / productivity | `ollama pull minimax-m2.7` | MiniMax M2-series model for coding and professional productivity. |
+| ministral-3 | 3B, 8B, 14B | Mistral | Edge / tools / vision | `ollama pull ministral-3` | Ministral model family designed for edge deployment. |
+| mistral | 7B | Mistral | General / tools | `ollama pull mistral:7b` | Compact Mistral 7B model for local general-purpose inference. |
+| mistral-large | 123B | Mistral | Large / coding / reasoning / tools | `ollama pull mistral-large` | Mistral flagship model for coding, mathematics, reasoning, and multilingual tasks. |
+| mistral-large-3 | Not specified | Mistral | Multimodal / enterprise / cloud | `ollama pull mistral-large-3` | General-purpose multimodal MoE model for production-grade tasks. |
+| mistral-medium-3.5 | 128B | Mistral | Reasoning / coding / multimodal | `ollama pull mistral-medium-3.5` | Flagship Mistral model combining instruction following, reasoning, and coding. |
+| mistral-nemo | 12B | Mistral | General / long context / tools | `ollama pull mistral-nemo` | Mistral-Nemo model with long-context capability. |
+| mistral-openorca | 7B | Mistral | General | `ollama pull mistral-openorca` | Mistral 7B fine-tuned on OpenOrca data. |
+| mistral-small | 22B, 24B | Mistral | General / tools | `ollama pull mistral-small` | Mistral Small model family below 70B. |
+| mistral-small3.1 | 24B | Mistral | Vision / long context / tools | `ollama pull mistral-small3.1` | Mistral Small update with vision understanding and long context. |
+| mistral-small3.2 | 24B | Mistral | General / tools / vision | `ollama pull mistral-small3.2` | Mistral Small update improving function calling and instruction following. |
+| mistrallite | 7B | Mistral | Long context | `ollama pull mistrallite` | Fine-tuned Mistral model with enhanced long-context capability. |
+| mixtral | 8x7B, 8x22B | Mistral | MoE / tools | `ollama pull mixtral` | Open-weight Mixture-of-Experts model family from Mistral AI. |
+| moondream | 1.8B | Moondream | Vision-language / edge | `ollama pull moondream` | Small vision-language model designed for efficient edge use. |
+| mxbai-embed-large | 335M | Mixedbread | Embedding | `ollama pull mxbai-embed-large` | Large embedding model from mixedbread.ai. |
+| nemotron | 70B | NVIDIA | General / tools | `ollama pull nemotron` | NVIDIA-customized Llama 3.1 Nemotron model for helpfulness. |
+| nemotron-3-nano | 4B, 30B | NVIDIA | Agentic / reasoning / tools | `ollama pull nemotron-3-nano` | Efficient Nemotron model for open, intelligent, agentic workflows. |
+| nemotron-3-super | 120B | NVIDIA | MoE / reasoning / agentic | `ollama pull nemotron-3-super` | NVIDIA MoE model with 12B active parameters for multi-agent applications. |
+| nemotron-cascade-2 | 30B total, 3B active | NVIDIA | MoE / reasoning / agentic | `ollama pull nemotron-cascade-2` | NVIDIA MoE model with strong reasoning and agentic capability. |
+| nemotron-mini | 4B | NVIDIA | Roleplay / RAG / function calling | `ollama pull nemotron-mini` | Small commercial-friendly NVIDIA model. |
+| nemotron3 | 33B | NVIDIA | Multimodal / enterprise / tools | `ollama pull nemotron3` | Multimodal model supporting video, audio, image, text, Q&A, summarization, and document intelligence. |
+| neural-chat | 7B | Intel / Mistral | Chat | `ollama pull neural-chat` | Mistral-based fine-tuned model for chat and general domains. |
+| nexusraven | 13B | Nexus Raven | Function calling | `ollama pull nexusraven` | Instruction-tuned model for function-calling tasks. |
+| nomic-embed-text | Not specified | Nomic | Embedding | `ollama pull nomic-embed-text` | High-performing open embedding model with a large context window. |
+| nomic-embed-text-v2-moe | Not specified | Nomic | Embedding / MoE / multilingual | `ollama pull nomic-embed-text-v2-moe` | Multilingual MoE text embedding model for retrieval. |
+| notus | 7B | Notus / Zephyr | Chat | `ollama pull notus` | Chat model fine-tuned with high-quality data and based on Zephyr. |
+| notux | 8x7B | Notux | MoE / general | `ollama pull notux` | Mixture-of-Experts model fine-tuned with high-quality data. |
+| nous-hermes | 7B, 13B | Nous Research | General | `ollama pull nous-hermes` | General-use models based on Llama and Llama 2. |
+| nous-hermes2 | 10.7B, 34B | Nous Research | General / coding | `ollama pull nous-hermes2` | Model family for scientific discussion and coding tasks. |
+| nous-hermes2-mixtral | 8x7B | Nous Research / Mixtral | MoE / general | `ollama pull nous-hermes2-mixtral` | Nous Hermes 2 model trained over Mixtral. |
+| nuextract | 3.8B | NuExtract / Phi | Information extraction | `ollama pull nuextract` | Information-extraction model based on Phi-3. |
+| olmo-3 | 7B, 32B | OLMo | Open research / general | `ollama pull olmo-3` | Open language model family designed to support language-model science. |
+| olmo-3.1 | 32B | OLMo | Open research / tools | `ollama pull olmo-3.1` | OLMo model family post-trained on open datasets. |
+| olmo2 | 7B, 13B | OLMo | General / open research | `ollama pull olmo2` | OLMo 2 model family trained on large-scale tokens. |
+| open-orca-platypus2 | 13B | OpenOrca / Platypus | Chat / code | `ollama pull open-orca-platypus2` | Merged model designed for chat and code generation. |
+| openchat | 7B | OpenChat | General chat | `ollama pull openchat` | Open-source chat model family trained on varied data. |
+| opencoder | 1.5B, 8B | OpenCoder | Coder / bilingual | `ollama pull opencoder` | Reproducible code LLM family supporting English and Chinese chat. |
+| openhermes | Not specified | OpenHermes | General | `ollama pull openhermes` | OpenHermes 2.5 model fine-tuned on open datasets. |
+| openthinker | 7B, 32B | OpenThinker | Reasoning | `ollama pull openthinker` | Open-source reasoning model family distilled from DeepSeek-R1-style data. |
+| orca-mini | 3B, 7B, 13B, 70B | Orca | General / entry-level hardware | `ollama pull orca-mini:7b` | General-purpose model family suitable for entry-level hardware. |
+| orca2 | 7B, 13B | Orca / Llama | Reasoning | `ollama pull orca2` | Microsoft research model fine-tuned from Llama 2 for reasoning. |
+| paraphrase-multilingual | 278M | Sentence Transformers | Embedding / semantic search | `ollama pull paraphrase-multilingual` | Sentence-transformer model for clustering and semantic search. |
+| phi | 2.7B | Phi | Lightweight / reasoning | `ollama pull phi` | Microsoft Phi-2 model with reasoning and language understanding capabilities. |
+| phi3 | 3.8B, 14B | Phi | Lightweight / reasoning | `ollama pull phi3` | Microsoft Phi-3 lightweight open model family. |
+| phi3.5 | 3.8B | Phi | Lightweight / reasoning | `ollama pull phi3.5` | Lightweight Phi model with strong performance for its size. |
+| phi4 | 14B | Phi | Reasoning / general | `ollama pull phi4` | Microsoft Phi-4 14B open model for reasoning and general tasks. |
+| phi4-mini | 3.8B | Phi | Lightweight / reasoning / tools | `ollama pull phi4-mini` | Small Phi-4 model with multilingual support, reasoning, mathematics, and function calling. |
+| phi4-mini-reasoning | 3.8B | Phi | Lightweight / reasoning | `ollama pull phi4-mini-reasoning` | Lightweight Phi-4 model balancing efficiency with advanced reasoning. |
+| phi4-reasoning | 14B | Phi | Reasoning | `ollama pull phi4-reasoning` | Phi-4 reasoning model family for complex reasoning tasks. |
+| phind-codellama | 34B | Phind / CodeLlama | Coder | `ollama pull phind-codellama` | Code generation model based on Code Llama. |
+| qwen | 0.5B, 1.8B, 4B, 7B, 14B, 32B, 72B, 110B | Qwen | General / multilingual | `ollama pull qwen:7b` | Alibaba Cloud transformer-based model family. |
+| qwen2 | 0.5B, 1.5B, 7B, 72B | Qwen | General / tools | `ollama pull qwen2` | Qwen 2 model family from Alibaba. |
+| qwen2-math | 1.5B, 7B, 72B | Qwen | Math | `ollama pull qwen2-math` | Qwen2 specialized math model family. |
+| qwen2.5 | 0.5B, 1.5B, 3B, 7B, 14B, 32B, 72B | Qwen | General / multilingual / tools | `ollama pull qwen2.5:7b` | Qwen2.5 model family supporting long context and multilingual use cases. |
+| qwen2.5-coder | 0.5B, 1.5B, 3B, 7B, 14B, 32B | Qwen | Coder / tools | `ollama pull qwen2.5-coder` | Code-specific Qwen model family for code generation, code reasoning, and code fixing. |
+| qwen2.5vl | 3B, 7B, 32B, 72B | Qwen | Vision-language | `ollama pull qwen2.5vl` | Flagship Qwen vision-language model family. |
+| qwen3 | 0.6B, 1.7B, 4B, 8B, 14B, 30B, 32B, 235B | Qwen | General / thinking / MoE / tools | `ollama pull qwen3:14b` | Qwen 3 model family including dense and mixture-of-experts models. |
+| qwen3-coder | 30B, 480B | Qwen | Coder / agentic / tools | `ollama pull qwen3-coder` | Long-context Qwen model family for agentic and coding tasks. |
+| qwen3-coder-next | Not specified | Qwen | Coder / agentic / tools | `ollama pull qwen3-coder-next` | Coding-focused Qwen model optimized for agentic local development workflows. |
+| qwen3-embedding | 0.6B, 4B, 8B | Qwen | Embedding | `ollama pull qwen3-embedding` | Qwen3-based text embedding model family. |
+| qwen3-next | 80B | Qwen | Thinking / tools / cloud | `ollama pull qwen3-next` | Qwen3-Next model focused on parameter efficiency and inference speed. |
+| qwen3-vl | 2B, 4B, 8B, 30B, 32B, 235B | Qwen | Vision-language / thinking / tools | `ollama pull qwen3-vl` | Vision-language Qwen model family for multimodal reasoning. |
+| qwen3.5 | 0.8B, 2B, 4B, 9B, 27B, 35B, 122B | Qwen | Multimodal / thinking / tools | `ollama pull qwen3.5` | Open-source multimodal Qwen family with text, tools, reasoning, and vision support. |
+| qwen3.6 | 27B, 35B | Qwen | Agentic coding / thinking / vision | `ollama pull qwen3.6` | Qwen family with upgrades for coding, thinking preservation, and multimodal use. |
+| qwq | 32B | Qwen | Reasoning / tools | `ollama pull qwq` | Qwen reasoning model. |
+| r1-1776 | 70B, 671B | Perplexity / DeepSeek | Reasoning / factuality | `ollama pull r1-1776` | Post-trained DeepSeek-R1 variant focused on unbiased and factual information. |
+| reader-lm | 0.5B, 1.5B | ReaderLM | HTML-to-Markdown | `ollama pull reader-lm` | Model family for converting HTML content to Markdown. |
+| reflection | 70B | Reflection | Reasoning correction | `ollama pull reflection` | Model trained with Reflection-tuning to detect and correct reasoning mistakes. |
+| rnj-1 | 8B | Essential AI | Code / STEM / tools | `ollama pull rnj-1` | Dense open-weight model optimized for code and STEM tasks. |
+| sailor2 | 1B, 8B, 20B | Sailor | Multilingual / Southeast Asia | `ollama pull sailor2` | Multilingual model family for Southeast Asian languages. |
+| samantha-mistral | 7B | Samantha / Mistral | Companion assistant | `ollama pull samantha-mistral` | Companion assistant trained in philosophy, psychology, and personal relationships. |
+| shieldgemma | 2B, 9B, 27B | Gemma | Safety / guardrail | `ollama pull shieldgemma` | Gemma-based safety evaluation model family. |
+| smallthinker | 3B | Qwen-derived | Small reasoning | `ollama pull smallthinker` | Small reasoning model fine-tuned from Qwen 2.5 3B Instruct. |
+| smollm | 135M, 360M, 1.7B | SmolLM | Small / general | `ollama pull smollm` | Small model family trained on high-quality datasets. |
+| smollm2 | 135M, 360M, 1.7B | SmolLM | Small / general / tools | `ollama pull smollm2` | Compact language model family. |
+| snowflake-arctic-embed | 22M, 33M, 110M, 137M, 335M | Snowflake | Embedding | `ollama pull snowflake-arctic-embed` | Snowflake embedding model suite optimized for performance. |
+| snowflake-arctic-embed2 | 568M | Snowflake | Embedding / multilingual | `ollama pull snowflake-arctic-embed2` | Multilingual Snowflake embedding model. |
+| solar | 10.7B | Upstage Solar | General chat | `ollama pull solar` | Compact single-turn conversation model. |
+| solar-pro | 22B | Upstage Solar | General | `ollama pull solar-pro` | Solar Pro preview model designed to fit into a single GPU. |
+| sqlcoder | 7B, 15B | SQLCoder | SQL / coder | `ollama pull sqlcoder` | Model fine-tuned for SQL generation. |
+| stable-beluga | 7B, 13B, 70B | Stable Beluga / Llama | General chat | `ollama pull stable-beluga` | Llama 2-based model fine-tuned on Orca-style data. |
+| stable-code | 3B | Stability AI | Coder | `ollama pull stable-code` | Compact coding model for code completion and instruction use. |
+| stablelm-zephyr | 3B | Stability AI / Zephyr | Lightweight chat | `ollama pull stablelm-zephyr` | Lightweight chat model for accurate and responsive output. |
+| stablelm2 | 1.6B, 12B | Stability AI | General / multilingual | `ollama pull stablelm2` | Multilingual language model family. |
+| starcoder | 1B, 3B, 7B, 15B | BigCode | Coder | `ollama pull starcoder` | Code generation model trained on many programming languages. |
+| starcoder2 | 3B, 7B, 15B | BigCode | Coder | `ollama pull starcoder2` | Next-generation openly trained code LLM family. |
+| starling-lm | 7B | Starling | Chat / RLHF-style | `ollama pull starling-lm` | Chat model trained by reinforcement learning from AI feedback. |
+| tinydolphin | 1.1B | Dolphin / TinyLlama | Small / experimental | `ollama pull tinydolphin` | Experimental Dolphin model based on TinyLlama. |
+| tinyllama | 1.1B | TinyLlama | Small / general | `ollama pull tinyllama` | Compact Llama-style model trained on large-scale text. |
+| translategemma | 4B, 12B, 27B | Gemma | Translation / vision | `ollama pull translategemma` | Gemma-based translation model collection supporting many languages. |
+| tulu3 | 8B, 70B | Allen AI | Instruction following | `ollama pull tulu3` | Open-source instruction-following model family. |
+| vicuna | 7B, 13B, 33B | Vicuna | Chat | `ollama pull vicuna` | General chat model based on Llama and Llama 2. |
+| wizard-math | 7B, 13B, 70B | Wizard | Math / logic | `ollama pull wizard-math` | Model focused on math and logic problems. |
+| wizard-vicuna | 13B | Wizard / Vicuna | Chat | `ollama pull wizard-vicuna` | Vicuna-based model trained by MelodysDreamj. |
+| wizard-vicuna-uncensored | 7B, 13B, 30B | Wizard / Vicuna | General chat | `ollama pull wizard-vicuna-uncensored` | Uncensored Vicuna-based model family. |
+| wizardcoder | 33B | WizardCoder | Coder | `ollama pull wizardcoder` | Code generation model family. |
+| wizardlm | Not specified | WizardLM | General | `ollama pull wizardlm` | General-use model based on Llama 2. |
+| wizardlm-uncensored | 13B | WizardLM | General chat | `ollama pull wizardlm-uncensored` | Uncensored WizardLM variant. |
+| wizardlm2 | 7B, 8x22B | WizardLM | General / multilingual / reasoning | `ollama pull wizardlm2` | Microsoft AI model family for complex chat, multilingual reasoning, and agent use cases. |
+| xwinlm | 7B, 13B | Xwin-LM | Conversational | `ollama pull xwinlm` | Conversational model based on Llama 2. |
+| yarn-llama2 | 7B, 13B | Llama | Long context | `ollama pull yarn-llama2` | Llama 2 extension supporting up to 128K context. |
+| yarn-mistral | 7B | Mistral | Long context | `ollama pull yarn-mistral` | Mistral extension supporting 64K or 128K context windows. |
+| yi | 6B, 9B, 34B | Yi | Bilingual / general | `ollama pull yi` | High-performing bilingual language model family. |
+| yi-coder | 1.5B, 9B | Yi | Coder | `ollama pull yi-coder` | Code language model family with fewer than 10B parameters. |
+| zephyr | 7B, 141B | Hugging Face / Mistral | Assistant / chat | `ollama pull zephyr` | Fine-tuned assistant model family based on Mistral and Mixtral. |
